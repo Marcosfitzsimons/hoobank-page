@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import HeroStats from "./components/HeroStats";
 import FirstSection from "./components/FirstSection";
 import SecondSection from "./components/SecondSection";
+import ThirdSection from "./components/ThirdSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </main>
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
     </>
   );
 }
