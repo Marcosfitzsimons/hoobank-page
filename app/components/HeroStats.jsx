@@ -20,7 +20,7 @@ const HeroStats = () => {
   ];
 
   return (
-    <article className="">
+    <article className="pb-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col items-center md:text-start font-semibold text-lg md:grid md:grid-cols-3 md:bg-slate-800/50 md:rounded-md md:mt-24 md:text-xl md:py-3 lg:text-3xl xl:text-4xl xl:gap-6">
         {data.map((dataItem, index) => (
           <p

@@ -22,10 +22,10 @@ const Hero = () => {
             </span>
             <span className="text-center">Payment Method.</span>
           </h1>
-          <div className="bg-gradient-to-r from-[#33BBCF] to-[#ecf7f7] p-[2px] flex items-center justify-center rounded-full w-32 aspect-square md:absolute md:top-0 md:right-0 xl:w-36 xl:right-6 xl:top-3 hover:scale-105 transition-transform">
+          <div className="relative bg-gradient-to-r from-[#33BBCF] to-[#ecf7f7] p-[2px] flex items-center justify-center rounded-full w-32 aspect-square md:absolute md:top-0 md:right-0 xl:w-36 xl:right-6 xl:top-3 hover:scale-105 transition ease-in-out duration-200 ">
             <a
               href="/"
-              className="flex flex-col items-center justify-center font-medium text-cyan-400 w-full h-full bg-[#00040e] rounded-full xl:text-lg "
+              className="flex flex-col items-center justify-center font-medium text-cyan-400 w-full h-full bg-[#00040e] rounded-full xl:text-lg"
             >
               <span className="relative xl:right-1 flex items-center gap-1 text-transparent bg-clip-text bg-gradient-to-r from-[#33BBCF] to-[#ecf7f7]">
                 Get{" "}
