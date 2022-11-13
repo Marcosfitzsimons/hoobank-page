@@ -26,7 +26,12 @@ const FirstSection = () => {
   return (
     <section className="py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col gap-3 lg:flex-row lg:justify-between">
-        <IntroSection />
+        <IntroSection
+          title="You do the business, we’ll handle the money."
+          text="With the right credit card, you can improve your financial life by
+        building credit, earning rewards and saving money. But with hundreds of
+        credit cards on the market."
+        />
         <div className="flex flex-col gap-6 lg:w-[40%] lg:gap-8">
           {articlesData.map((article, index) => (
             <article
