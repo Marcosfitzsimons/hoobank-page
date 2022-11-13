@@ -3,7 +3,7 @@ import { TbArrowUpRight } from "react-icons/tb";
 
 const Hero = () => {
   return (
-    <section className="relative py-16">
+    <section className="relative py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col items-center gap-8 md:items-start">
         <div className="flex items-center justify-center gap-2 bg-[#1f1e1e] rounded-md md:py-1 px-2 pr-3">
           <div className="relative w-8 h-8">
