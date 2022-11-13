@@ -27,7 +27,7 @@ const FirstSection = () => {
     <section className="py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col gap-3 lg:flex-row lg:justify-between">
         <IntroSection />
-        <div className="flex flex-col gap-4 lg:w-[40%] lg:gap-8">
+        <div className="flex flex-col gap-6 lg:w-[40%] lg:gap-8">
           {articlesData.map((article, index) => (
             <article
               key={index}
@@ -42,8 +42,12 @@ const FirstSection = () => {
                 />
               </div>
               <div className="flex flex-col lg:gap-2">
-                <h3 className="font-semibold text-lg">{article.title}</h3>
-                <p className="text-gray-400">{article.text}</p>
+                <h3 className="font-semibold text-base lg:text-lg">
+                  {article.title}
+                </h3>
+                <p className="text-gray-400 text-sm lg:text-base">
+                  {article.text}
+                </p>
               </div>
             </article>
           ))}

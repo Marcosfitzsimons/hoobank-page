@@ -13,11 +13,11 @@ const SecondSection = () => {
             sizes="(max-width: 1080px) 100vw, 40vw"
           />
         </div>
-        <div className="text-center flex flex-col items-center gap-4 lg:text-start lg:items-start lg:w-[40%] lg:gap-8 lg:order-2">
+        <div className="text-center flex flex-col items-center gap-6 lg:text-start lg:items-start lg:w-[40%] lg:gap-8 lg:order-2">
           <h2 className="text-3xl flex flex-col gap-2 font-semibold lg:text-4xl xl:text-5xl xl:leading-[60px]">
             Easily control your <span>billing & invoicing.</span>
           </h2>
-          <p className="text-gray-400 max-w-[80%] xl:text-lg xl:max-w-[90%] xl:leading-8">
+          <p className="text-gray-400 max-w-[90%] xl:text-lg xl:leading-8">
             Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio
             aenean neque. Fusce ipsum orci rhoncus aliporttitor integer platea
             placerat.
