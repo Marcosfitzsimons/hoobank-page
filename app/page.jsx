@@ -5,6 +5,7 @@ import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
 import About from "./components/About";
 import Sponsors from "./components/Sponsors";
+import Banner from "./components/Banner";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ThirdSection />
       <About />
       <Sponsors />
+      <Banner />
     </>
   );
 }
