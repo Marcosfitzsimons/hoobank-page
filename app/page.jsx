@@ -3,6 +3,7 @@ import HeroStats from "./components/HeroStats";
 import FirstSection from "./components/FirstSection";
 import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <About />
     </>
   );
 }
