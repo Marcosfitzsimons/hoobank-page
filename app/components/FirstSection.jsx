@@ -5,7 +5,7 @@ const FirstSection = () => {
   const articlesData = [
     {
       title: "Rewards",
-      text: "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      text: "The best credit cards offer some tantalizing combinations of promotions and prizes.",
       icon: "/assets/Star.svg",
       alt: "star",
     },
@@ -36,7 +36,7 @@ const FirstSection = () => {
           {articlesData.map((article, index) => (
             <article
               key={index}
-              className="flex items-center gap-4 p-1 lg:p-4 rounded-lg transiton ease-in duration-100 select-none hover:bg-gradient-to-br hover:from-gray-800/80 hover:to-gray-800/30 hover:translate-x-2"
+              className="flex items-center gap-4 p-2 lg:p-4 rounded-lg transiton ease-in duration-100 select-none hover:bg-gradient-to-br hover:from-gray-800/80 hover:to-gray-800/30 hover:translate-x-2"
             >
               <div className="flex items-center justify-center bg-cyan-800/10 rounded-full w-[80px] h-[80px] shrink-0">
                 <Image
