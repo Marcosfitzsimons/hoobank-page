@@ -4,6 +4,7 @@ import FirstSection from "./components/FirstSection";
 import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
 import About from "./components/About";
+import Sponsors from "./components/Sponsors";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <About />
+      <Sponsors />
     </>
   );
 }
