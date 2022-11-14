@@ -34,7 +34,7 @@ const About = () => {
             anywhere on the planet.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-4 lg:grid lg:grid-cols-3">
+        <div className="flex flex-col items-center gap-4 lg:grid lg:grid-cols-3 lg:place-items-center">
           {articlesData.map((card, index) => (
             <article
               key={index}
