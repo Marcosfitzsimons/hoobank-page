@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const navLinks = [
@@ -42,6 +43,9 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+        <div className="z-50">
+          <MobileNav navLinks={navLinks} />
+        </div>
       </div>
     </header>
   );
