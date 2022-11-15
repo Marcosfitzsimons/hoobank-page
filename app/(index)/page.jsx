@@ -1,25 +1,27 @@
-import Hero from "../components/Hero";
-import HeroStats from "../components/HeroStats";
-import Features from "../components/Features";
-import Bill from "../components/Bill";
-import Card from "../components/Card";
-import Feedback from "../components/Feedback";
-import Sponsors from "../components/Sponsors";
-import Banner from "../components/Banner";
+import {
+  Hero,
+  HeroStats,
+  Features,
+  Bill,
+  Card,
+  Feedback,
+  Sponsors,
+  Banner,
+} from "../components";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <main className="">
         <Hero />
         <HeroStats />
+        <Features />
+        <Bill />
+        <Card />
       </main>
-      <Features />
-      <Bill />
-      <Card />
       <Feedback />
       <Sponsors />
       <Banner />
-    </>
+    </div>
   );
 }
