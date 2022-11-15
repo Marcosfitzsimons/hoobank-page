@@ -29,22 +29,24 @@ const Header = () => {
     <header>
       <div className="w-[min(90%,1400px)] mx-auto py-4 flex items-center justify-between">
         <Image src="/assets/logo.svg" width={140} height={50} alt="logo" />
-        <nav className="hidden md:flex">
-          <ul className="flex items-center gap-10">
-            {navLinks.map((navLink) => (
-              <li
-                key={navLink.id}
-                className={`${
-                  navLink.active ? "text-white" : "text-gray-400"
-                } cursor-pointer`}
-              >
-                {navLink.content}
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className="z-50">
-          <MobileNav navLinks={navLinks} />
+        <div className="">
+          <nav className="hidden md:flex">
+            <ul className="flex items-center gap-10">
+              {navLinks.map((navLink) => (
+                <li
+                  key={navLink.id}
+                  className={`${
+                    navLink.active ? "text-white" : "text-gray-400"
+                  } cursor-pointer`}
+                >
+                  {navLink.content}
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="z-50">
+            <MobileNav navLinks={navLinks} />
+          </div>
         </div>
       </div>
     </header>

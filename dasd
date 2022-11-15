@@ -1,0 +1,45 @@
+[1mdiff --git a/app/components/Header.jsx b/app/components/Header.jsx[m
+[1mindex 7343618..03aeb33 100644[m
+[1m--- a/app/components/Header.jsx[m
+[1m+++ b/app/components/Header.jsx[m
+[36m@@ -29,22 +29,24 @@[m [mconst Header = () => {[m
+     <header>[m
+       <div className="w-[min(90%,1400px)] mx-auto py-4 flex items-center justify-between">[m
+         <Image src="/assets/logo.svg" width={140} height={50} alt="logo" />[m
+[31m-        <nav className="hidden md:flex">[m
+[31m-          <ul className="flex items-center gap-10">[m
+[31m-            {navLinks.map((navLink) => ([m
+[31m-              <li[m
+[31m-                key={navLink.id}[m
+[31m-                className={`${[m
+[31m-                  navLink.active ? "text-white" : "text-gray-400"[m
+[31m-                } cursor-pointer`}[m
+[31m-              >[m
+[31m-                {navLink.content}[m
+[31m-              </li>[m
+[31m-            ))}[m
+[31m-          </ul>[m
+[31m-        </nav>[m
+[31m-        <div className="z-50">[m
+[31m-          <MobileNav navLinks={navLinks} />[m
+[32m+[m[32m        <div className="">[m
+[32m+[m[32m          <nav className="hidden md:flex">[m
+[32m+[m[32m            <ul className="flex items-center gap-10">[m
+[32m+[m[32m              {navLinks.map((navLink) => ([m
+[32m+[m[32m                <li[m
+[32m+[m[32m                  key={navLink.id}[m
+[32m+[m[32m                  className={`${[m
+[32m+[m[32m                    navLink.active ? "text-white" : "text-gray-400"[m
+[32m+[m[32m                  } cursor-pointer`}[m
+[32m+[m[32m                >[m
+[32m+[m[32m                  {navLink.content}[m
+[32m+[m[32m                </li>[m
+[32m+[m[32m              ))}[m
+[32m+[m[32m            </ul>[m
+[32m+[m[32m          </nav>[m
+[32m+[m[32m          <div className="z-50">[m
+[32m+[m[32m            <MobileNav navLinks={navLinks} />[m
+[32m+[m[32m          </div>[m
+         </div>[m
+       </div>[m
+     </header>[m
