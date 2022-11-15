@@ -1,8 +1,8 @@
 import Image from "next/image";
 import IntroSection from "./IntroSection";
 
-const FirstSection = () => {
-  const articlesData = [
+const Features = () => {
+  const featuresData = [
     {
       title: "Rewards",
       text: "The best credit cards offer some tantalizing combinations of promotions and prizes.",
@@ -33,7 +33,7 @@ const FirstSection = () => {
         credit cards on the market."
         />
         <div className="flex flex-col gap-6 lg:w-[40%] lg:gap-8">
-          {articlesData.map((article, index) => (
+          {featuresData.map((article, index) => (
             <article
               key={index}
               className="flex items-center gap-4 p-2 lg:p-4 rounded-lg transiton ease-in duration-100 select-none hover:bg-gradient-to-br hover:from-gray-800/80 hover:to-gray-800/30 hover:translate-x-2"
@@ -62,4 +62,4 @@ const FirstSection = () => {
   );
 };
 
-export default FirstSection;
+export default Features;

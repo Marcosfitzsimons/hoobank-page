@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const About = () => {
+const Feedback = () => {
   const articlesData = [
     {
       userImg: "/assets/people01.png",
@@ -68,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Feedback;
