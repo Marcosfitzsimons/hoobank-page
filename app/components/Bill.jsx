@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const SecondSection = () => {
+const Bill = () => {
   return (
     <section className="py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col items-center gap-10 lg:flex-row lg:justify-between">
@@ -50,4 +50,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default Bill;

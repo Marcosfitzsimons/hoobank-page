@@ -1,9 +1,9 @@
 import Hero from "./components/Hero";
 import HeroStats from "./components/HeroStats";
-import FirstSection from "./components/FirstSection";
-import SecondSection from "./components/SecondSection";
-import ThirdSection from "./components/ThirdSection";
-import About from "./components/About";
+import Features from "./components/Features";
+import Bill from "./components/Bill";
+import Card from "./components/Card";
+import Feedback from "./components/Feedback";
 import Sponsors from "./components/Sponsors";
 import Banner from "./components/Banner";
 
@@ -14,10 +14,10 @@ export default function Home() {
         <Hero />
         <HeroStats />
       </main>
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <About />
+      <Features />
+      <Bill />
+      <Card />
+      <Feedback />
       <Sponsors />
       <Banner />
     </>
