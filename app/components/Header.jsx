@@ -26,8 +26,8 @@ const Header = () => {
   ];
 
   return (
-    <header>
-      <div className="w-[min(90%,1400px)] mx-auto py-4 flex items-center justify-between">
+    <header className="">
+      <div className="w-[min(90%,1400px)] mx-auto py-4 flex items-center justify-between z-50">
         <Image src="/assets/logo.svg" width={140} height={50} alt="logo" />
         <div className="">
           <nav className="hidden md:flex">
@@ -44,7 +44,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="z-50">
+          <div className="">
             <MobileNav navLinks={navLinks} />
           </div>
         </div>

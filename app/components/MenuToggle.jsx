@@ -9,7 +9,7 @@ const MenuToggle = ({ showMenu, setShowMenu }) => {
   };
 
   return (
-    <div className="md:hidden">
+    <div className="relative z-50 md:hidden">
       {!showMenu ? (
         <CgMenuRightAlt
           onClick={handleShowMenu}
