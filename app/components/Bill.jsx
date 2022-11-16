@@ -1,10 +1,33 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
+
+const imgVariants = {
+  hidden: {
+    x: -200,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+    },
+  },
+};
 
 const Bill = () => {
   return (
     <section className="py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col items-center gap-10 lg:flex-row lg:justify-between">
-        <div className="relative order-2 w-full max-w-md h-[340px] lg:h-[480px] lg:max-w-[560px] lg:order-1">
+        <motion.div
+          variants={imgVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="relative order-2 w-full max-w-md h-[340px] lg:h-[480px] lg:max-w-[560px] lg:order-1"
+        >
           <Image
             src="/assets/bill.png"
             fill
@@ -12,7 +35,7 @@ const Bill = () => {
             className=""
             sizes="(max-width: 1080px) 100vw, 40vw"
           />
-        </div>
+        </motion.div>
         <div className="text-center flex flex-col items-center gap-6 lg:text-start lg:items-start lg:w-[40%] lg:gap-8 lg:order-2">
           <h2 className="text-3xl flex flex-col gap-2 font-semibold lg:text-4xl xl:text-5xl xl:leading-[60px]">
             Easily control your billing & invoicing.

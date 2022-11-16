@@ -1,5 +1,22 @@
-import IntroSection from "./IntroSection";
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
+import IntroSection from "./IntroSection";
+
+const imgVariants = {
+  hidden: {
+    x: 200,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+    },
+  },
+};
 
 const Card = () => {
   return (
@@ -9,7 +26,13 @@ const Card = () => {
           title="Find a better card deal in few easy steps."
           text="Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau."
         />
-        <div className="relative w-full max-w-md h-[340px] lg:h-[480px] lg:w-[50%] lg:max-w-[560px]">
+        <motion.div
+          variants={imgVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="relative w-full max-w-md h-[340px] lg:h-[480px] lg:w-[50%] lg:max-w-[560px]"
+        >
           <Image
             src="/assets/card.png"
             fill
@@ -17,7 +40,7 @@ const Card = () => {
             className=""
             sizes="(max-width: 1080px) 100vw, 40vw"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Feedback = () => {
@@ -22,10 +25,30 @@ const Feedback = () => {
     },
   ];
 
+  const feedbackVariants = {
+    hidden: {
+      y: 200,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+      },
+    },
+  };
+
   return (
     <section className="py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col gap-10">
-        <div className="flex flex-col items-center text-center gap-6 lg:flex-row lg:justify-between lg:text-start">
+        <motion.div
+          variants={feedbackVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col items-center text-center gap-6 lg:flex-row lg:justify-between lg:text-start"
+        >
           <h3 className="text-3xl font-semibold lg:text-4xl lg:w-[40%] xl:text-5xl xl:leading-[60px]">
             What people are saying about us
           </h3>
@@ -33,8 +56,14 @@ const Feedback = () => {
             Everything you need to accept card payments and grow your business
             anywhere on the planet.
           </p>
-        </div>
-        <div className="flex flex-col items-center gap-4 lg:grid lg:grid-cols-3 lg:place-items-center">
+        </motion.div>
+        <motion.div
+          variants={feedbackVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-4 lg:grid lg:grid-cols-3 lg:place-items-center"
+        >
           {articlesData.map((card, index) => (
             <article
               key={index}
@@ -62,7 +91,7 @@ const Feedback = () => {
               </div>
             </article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

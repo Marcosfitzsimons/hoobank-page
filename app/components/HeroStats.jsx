@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 
 const HeroStats = () => {
   const data = [
@@ -19,8 +21,25 @@ const HeroStats = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
-    <article className="pb-20">
+    <motion.article
+      className="pb-20"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col items-center md:text-start font-semibold text-lg md:grid md:grid-cols-3 md:bg-slate-800/50 md:rounded-md md:mt-24 md:text-xl md:py-3 lg:text-3xl xl:text-4xl xl:gap-6">
         {data.map((dataItem, index) => (
           <p
@@ -37,7 +56,7 @@ const HeroStats = () => {
           </p>
         ))}
       </div>
-    </article>
+    </motion.article>
   );
 };
 

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import IntroSection from "./IntroSection";
 
@@ -23,6 +26,20 @@ const Features = () => {
     },
   ];
 
+  const articleVariants = {
+    hidden: {
+      x: 200,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+      },
+    },
+  };
+
   return (
     <section className="py-20">
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col gap-3 lg:flex-row lg:justify-between">
@@ -34,9 +51,13 @@ const Features = () => {
         />
         <div className="flex flex-col gap-6 lg:w-[40%] lg:gap-8">
           {featuresData.map((article, index) => (
-            <article
+            <motion.article
+              variants={articleVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               key={index}
-              className="flex items-center gap-4 p-2 lg:p-4 rounded-lg transiton ease-in duration-100 select-none hover:bg-gradient-to-br hover:from-gray-800/80 hover:to-gray-800/30 hover:translate-x-2"
+              className="flex items-center gap-4 p-2 lg:p-4 rounded-lg select-none hover:bg-gradient-to-br hover:from-gray-800/80 hover:to-gray-800/30 hover:translate-x-2"
             >
               <div className="flex items-center justify-center bg-cyan-800/10 rounded-full w-[80px] h-[80px] shrink-0">
                 <Image
@@ -54,7 +75,7 @@ const Features = () => {
                   {article.text}
                 </p>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

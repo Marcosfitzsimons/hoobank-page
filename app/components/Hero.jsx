@@ -1,9 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import { TbArrowUpRight } from "react-icons/tb";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const Hero = () => {
   return (
-    <section className="relative py-20">
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="relative py-20"
+    >
       <div className="w-[min(90%,1400px)] mx-auto flex flex-col items-center gap-8 md:items-start">
         <div className="flex items-center justify-center gap-2 bg-[#1f1e1e] rounded-md md:py-1 px-2 pr-3">
           <div className="relative w-8 h-8">
@@ -22,7 +44,7 @@ const Hero = () => {
             </span>
             <span className="text-center">Payment Method.</span>
           </h1>
-          <div className="relative bg-gradient-to-r from-[#33BBCF] to-[#ecf7f7] p-[2px] flex items-center justify-center rounded-full w-32 aspect-square md:absolute md:top-0 md:right-0 xl:w-36 xl:right-6 xl:top-3 hover:scale-105 transition ease-in-out duration-200 ">
+          <div className="animate animate-pulse relative bg-gradient-to-r from-[#33BBCF] to-[#ecf7f7] p-[2px] flex items-center justify-center rounded-full w-32 aspect-square md:absolute md:top-0 md:right-0 xl:w-36 xl:right-6 xl:top-3 hover:scale-105 transition duration-200 ease-out">
             <a
               href="/"
               className="flex flex-col items-center justify-center font-medium text-cyan-400 w-full h-full bg-[#00040e] rounded-full xl:text-lg"
@@ -52,7 +74,7 @@ const Hero = () => {
         priority
         sizes="(max-width: 1240px) 100vw, 40vw"
       />
-    </section>
+    </motion.section>
   );
 };
 
